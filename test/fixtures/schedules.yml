@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  start_time: 2021-05-31
+  finish_time: 2021-05-31
+  all_day: MyString
+  schedule_memo: MyString
+
+two:
+  title: MyString
+  start_time: 2021-05-31
+  finish_time: 2021-05-31
+  all_day: MyString
+  schedule_memo: MyString

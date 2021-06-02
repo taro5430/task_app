@@ -1,0 +1,35 @@
+<h3>スケジュール新規作成</h3>
+
+<%= render "shared/error",obj:@schedule %>
+
+<%= form_with model: @schedule do |form| %>
+  <table>
+    <tr>
+      <th><%= form.label :title,"タイトル" %></th>
+      <td><%= form.text_field :title %></td>
+    </tr>
+    <tr>
+      <th><%= form.label :start,"開始日" %></th>
+      <td><%= form.date_field :start_time %></td>
+    </tr>
+    <tr>
+      <th><%= form.label :finish,"終了日" %></th>
+      <td><%= form.date_field :finish_time %></td>
+    </tr>
+    <tr>
+      <th><%= form.label :all_day,"終日" %></th>
+      <td><%= form.check_box :all_day,{},checked_value= "○",unchecked_value= "" %><br><%= "終日の場合はチェックを入れます" %></td>
+    </tr>
+    <tr>
+      <th><%= form.label :schedule_memo,"スケジュールメモ" %></th>
+      <td><%= form.text_area :schedule_memo %></td>
+    </tr>
+  </table>
+
+  <div>
+    <ul>
+      <li><%= form.submit "スケジュールを新規登録する" %></li>
+      <li><%= link_to "スケジュール一覧に戻る",:schedules %></li>
+    </ul>
+  </div>
+<% end %>

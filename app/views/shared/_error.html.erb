@@ -1,0 +1,11 @@
+<% if obj.errors.any? %>
+  <% if  flash[:error_notice] %>
+    <p class="error_notice"><%= flash[:error_notice] %></p>
+  <% end %>
+
+  <% obj.errors.full_messages.each do |message| %>
+    <ul>
+      <li><%= message %></li>
+    </ul>
+  <% end %>
+<% end %>
